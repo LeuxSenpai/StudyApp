@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple Pomodoro timer application.">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Pomodoro App</title>
+</head>
+<body>
+    <div class="app-container">
+        <h1>POMODORO</h1>
+        <div class="app-message">press <img src="https://www.freeiconspng.com/thumbs/play-button-icon-png/play-button-icon-png-0.png" alt="Start" width="20" height="20" /> to begin</div>
+        <div class="app-circle">
+            <div class="semi-circle right-side circle-mask"></div>
+            <div class="semi-circle right-side circle"></div>
+            <div class="semi-circle left-side circle-mask"></div>
+            <div class="semi-circle left-side circle"></div>
+        </div>
+    </div>
+    <div class="app-count">
+        <p><span class="minutes">25</span>:<span class="seconds">00</span></p>
+    </div>
+    <div class="btn">
+        <button class="btn-start">
+            <img src="images/play.png" alt="Start" width="80" height="80" />
+        </button>
+        <button class="btn-pause hidden">
+            <img src="images/pause.png" alt="Pause" width="80" height="80" />
+        </button>
+        <button class="btn-reset">
+            <img src="images/reset.png" alt="Reset" width="90" height="90" />
+        </button>
+    </div>
+    <div class="app-list">
+        <div class="app-list-item"><button class="short-break">Short Break</button></div>
+        <div class="app-list-item"><button class="default">Default</button></div>
+        <div class="app-list-item"><button class="long-break">Long Break</button></div>
+        <div class="app-list-item"><button class="custom">Custom</button></div>
+    </div>
+    <h2>To-DO List</h2>
+    <div class="app-container-2">
+       
+        <!-- To do List container -->
+       
+        <div class="todo-container">
+            
+            <div class="pomo-photo">
+                <img src="images/tomato.png" alt="Pomodoro" width="1000" height="1000" />
+            </div>
+           
+            <!-- Header -->
+            <div class="meow">
+               
+                <div class="todo-block"></div>
+                <button class="input-btn" onclick="addButtonBlock()">Add</button>
+            </div>
+        </div>
+        
+    </div>
+    <footer>
+        <p>© 2025 Owned By LeuxSenpai</p>
+    </footer>
+
+    <!-- Modal for Time's Up -->
+    <div id="timeUpModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <p>Time's up!</p>
+            <button id="okBtn">OK</button>
+        </div>
+    </div>
+
+    <!-- Modal for Custom Settings -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h3>Custom Timer Settings</h3>
+            <label for="customDefault">Default Time (min):</label>
+            <input type="number" id="customDefault" value="25" min="1"><br><br>
+            <label for="customShortBreak">Short Break (min):</label>
+            <input type="number" id="customShortBreak" value="5" min="1"><br><br>
+            <label for="customLongBreak">Long Break (min):</label>
+            <input type="number" id="customLongBreak" value="15" min="1"><br><br>
+            <button id="saveCustom">Save</button>
+        </div>
+    </div>
+
+    <!-- Modal for To-Do -->
+    <div id="todoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h3>Task Manager</h3>
+            <hr>
+            <button class="notesbtn" onclick="showSection('notes')">Notes</button>
+            <button class="checkbtn" onclick="showSection('checklist')">Check List</button>
+            <div class="notes" style="display: none;">
+                <input type="text" id="taskTitleNotes" placeholder="Title">
+                <input type="text" id="taskInputNotes" placeholder="Notes">
+                <button id="addSaveNotes">Save</button>
+                <span class="close">×</span> <!-- Added close button for Notes section -->
+            </div>
+            <div class="checklist" style="display: none;">
+                <input type="text" id="taskTitleChecklist" placeholder="Title">
+                <input type="text" id="taskCheckListItem" placeholder="Check List item">
+                <button id="addItemChecklist">Add Item</button>
+                <button id="addSaveChecklist">Save</button>
+                <ul id="checklistItems"></ul>
+                <span class="close">×</span> <!-- Added close button for Checklist section -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,654 @@
+html {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    min-height: 100vh;
+    color: #d8e9ef;
+    background-image: url('https://www.bing.com/th/id/OGC.65c4bb1da1b6f751fe07a01084daa26e?pid=1.7&rurl=https%3a%2f%2fcdna.artstation.com%2fp%2fassets%2fimages%2fimages%2f025%2f789%2f352%2foriginal%2fpixel-jeff-galaxy-far-far-away.gif%3f1586928273&ehk=eb7zx%2boEmOj%2ff5z1tD5%2bK1iWiEtNr0boNMLQTZcS%2bVY%3d');
+    background-size: cover;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150px;
+    color: #ffffff;
+    margin: 0;
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+.app-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin-top: -720px;
+    margin-bottom: 800px;
+}
+
+.app-list-item button {
+    margin-top: 200px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.app-list-item button:hover {
+    transform: scale(1.1);
+    color: #d8e9ef;
+}
+
+.app-circle {
+    background-color: #2e003e;
+    margin: 200px auto -200px;
+    border: #000000 2.5px solid;
+    border-radius: 100%;
+    height: 400px;
+    width: 420px;
+    z-index: -1;
+}
+
+.app-count {
+    font-size: 60px;
+    color: #ffffff;
+    margin: 315px 0px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: none;
+    margin-top: -220px;
+    margin-bottom: 800px;
+    padding: 0;
+    z-index: 1;
+}
+
+.btn-start {
+    background: none;
+    border: none;
+    color: #ffffff;
+    margin-top: -125px;
+    margin-right: 240px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-start:hover {
+    color: #000000;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-pause {
+    background: none;
+    border: none;
+    color: #ffffff;
+    margin-top: -125px;
+    margin-right: 240px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-pause:hover {
+    color: #000000;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-reset {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: -135px;
+    margin-right: 20px;
+    margin-left: 450px;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    color: #000000;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.app-container-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    margin-top: -600px;
+    padding: 20px;
+}
+.todo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Tablet size */
+@media (max-width: 1024px) {
+    .todo-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -400px;
+        gap: 60px;
+    }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+    .todo-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -300px;
+        gap: 50px;
+    }
+}
+
+/* Phones (e.g., iPhone 13, iPhone X) */
+@media (max-width: 480px) {
+    .todo-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -250px;
+        padding: 10px;
+        gap: 40px;
+    }
+}
+
+/* Small phones (e.g., iPhone SE) */
+@media (max-width: 375px) {
+    .todo-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -200px;
+        padding: 8px;
+        gap: 30px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .todo-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: -180px;
+        padding: 5px;
+        gap: 20px;
+    }
+}
+
+
+.pomo-photo {
+    text-align: center;
+}
+
+.pomo-photo img {
+    border-radius: 20px;
+    border: 4px solid #cb96b1;
+    box-shadow: 0 0 12px #cb96b1;
+}
+
+/* Existing styles remain unchanged */
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #351a36;
+    margin: 300px auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#saveCustom {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#saveCustom:hover {
+    background-color: #45a049;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    border: 1px solid gray;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 1000px;
+    position: absolute;
+    text-align: center;
+    padding: 20px 0;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Added Styles for To-Do Functionality */
+.todo-container {
+    margin-top: 600px;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+    
+    color: white;
+    padding: 20px;
+    background-color: rgba(46, 0, 62, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(203, 150, 177, 0.5);
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    font-weight: 800;
+    color: #462795;
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: -350px;
+    z-index: 2;
+}
+
+.todo-block {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.todo-block div {
+    margin: 5px 0;
+    padding: 10px;
+    background: #2e003e;
+    border: 1px solid #cb96b1;
+    border-radius: 5px;
+    position: relative; /* Added for positioning edit/delete buttons */
+}
+
+.todo-block div .edit-btn,
+.todo-block div .delete-btn {
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    color: crimson;
+    cursor: pointer;
+    margin: 3px 5px;
+    padding: 3px 5px;
+    background: none;
+    border: none;
+}
+
+.todo-block div .edit-btn {
+    right: 80px; /* Increased space between edit and delete */
+}
+
+.input-btn {
+    width: 10%;
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cb96b1;
+    color: #1a0026;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.input-btn:hover {
+    background-color: #e0a2c0;
+}
+
+#todoModal .modal-content {
+    max-width: 500px; /* Increased for better layout */
+}
+
+.notesbtn,
+.checkbtn {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #cb96b1;
+    color: #1a0026;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.notesbtn:hover,
+.checkbtn:hover {
+    background-color: #e0a2c0;
+}
+
+.notes,
+.checklist {
+    margin-top: 20px;
+}
+
+.notes {
+    height: 250px; /* Increased height for notes section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#taskTitleNotes,
+#taskInputNotes {
+    width: 85%; /* Match width of taskTitleNotes */
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #cb96b1;
+    border-radius: 5px;
+    background-color: #1a0026;
+    color: white;
+}
+#taskInputNotes {
+    height: 100px; /* Keep height as is */
+}
+#addSaveNotes {
+    margin-top: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cb96b1;
+    color: #1a0026;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    align-self: flex-end; /* Position below inputs */
+}
+.notes input,
+.checklist input {
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #cb96b1;
+    border-radius: 5px;
+    background-color: #1a0026;
+    color: white;
+    width: 85%;
+}
+
+.notes button,
+.checklist button {
+    padding: 8px 16px;
+    margin: 15px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #cb96b1;
+    color: #1a0026;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.notes button {
+    align-self: flex-end; /* Moves button to the right side */
+    margin-top: auto; /* Pushes button to the bottom */
+}
+
+.notes button:hover,
+.checklist button:hover {
+    background-color: #e0a2c0;
+}
+
+#checklistItems {
+    list-style-type: none; /* Hides the bullets */
+    padding: 0;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#checklistItems li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background: #2e003e;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #cb96b1;
+    position: relative; /* For absolute positioning of buttons */
+}
+
+#checklistItems li input[type="checkbox"] {
+    margin-right: -150px;
+    margin-left: -150px;
+}
+
+#checklistItems li .delete-btn {
+    position: absolute;
+    right: 10px;
+    margin-left: 0;
+    color: crimson;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 3px 5px;
+    background: none;
+    border: none;
+}
+
+#checklistItems li .edit-btn {
+    position: absolute;
+    right: 80px;
+    margin-left: 0;
+    font-size: 18px;
+    color: #cb96b1;
+    cursor: pointer;
+    padding: 3px 5px;
+    background: none;
+    border: none;
+}
+
+#checklistItems li .completed {
+    text-decoration: line-through; /* Ensures text-decoration is used for completed items */
+    color: gray;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .app-container-2 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        gap: 20px;
+    }
+
+    .pomo-photo img {
+        width: 90%;
+        max-width: 400px; /* Adjust image size for smaller screens */
+        height: auto;
+    }
+
+    .todo-container {
+        width: 90%;
+        max-width: 90%;
+        height: auto;
+        max-height: none;
+    }
+
+}
+
+@media (max-width: 200px) {
+    .app-container-2 {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        gap: 10px; /* Reduced gap for very small screens */
+    }
+
+    .pomo-photo img {
+        width: 90%;
+        max-width: 150px; /* Smaller image for very small screens */
+        height: auto;
+    }
+
+    .todo-container {
+        width: 90%;
+        max-width: 90%;
+        height: auto;
+        max-height: none;
+        margin-top: 10px; /* Ensure it stays below the image */
+    }
+
+  
+
+    .app-list {
+        gap: 50px; /* Reduce gap between buttons on very small screens */
+        margin-top: -300px; /* Adjust positioning for small screens */
+        margin-bottom: 300px;
+    }
+
+    .btn {
+        margin-top: -100px; /* Adjust button group position */
+        margin-bottom: 300px;
+    }
+
+    h1 {
+        font-size: 80px; /* Reduce header size for readability */
+    }
+}
+.meow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Tablet size */
+@media (max-width: 1024px) {
+    .meow {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    
+    .pomo-photo img {
+        order: -1; /* Ensures image comes first */
+        margin-bottom: 30px;
+    }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+    .meow {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+    
+    .pomo-photo img {
+        order: -1;
+        margin-bottom: 25px;
+        max-width: 350px;
+    }
+}
+
+/* Phones (e.g., iPhone 13, iPhone X) */
+@media (max-width: 480px) {
+    .meow {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    
+    .pomo-photo img {
+        order: -1;
+        margin-bottom: 20px;
+        max-width: 300px;
+    }
+}
+
+/* Small phones (e.g., iPhone SE) */
+@media (max-width: 375px) {
+    .meow {
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    
+    .pomo-photo img {
+        order: -1;
+        margin-bottom: 15px;
+        max-width: 250px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .meow {
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    
+    .pomo-photo img {
+        order: -1;
+        margin-bottom: 10px;
+        max-width: 200px;
+    }
+}
